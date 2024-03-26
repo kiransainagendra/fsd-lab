@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Event Bubbling Example</title>
+        <style>
+            div{
+                border: 1px solid #ccc;
+                padding:10px;
+                margin:10px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="parent">
+            <div id="child">Click me!</div>
+        </div>
+        <script>
+            document.getElementById('parent').addEventListener('click',function(){
+                alert('Parent Div Clicked (Bubbling)');
+            });
+            document.getElementById('child').addEventListener('click',function(){
+                alert('Child Div Clicked (Bubbling)');
+            });
+        </script>
+    </body>
+</html>
